@@ -8,7 +8,7 @@ variables:
   project_webserver: "t3-debian12-01"
   project_database: "t3-mariadb10-11-01"
   project_php_version: "8.2"
-  downstream_pipeline_branch: major-1.x.x
+  downstream_pipeline_branch: dev
 
 default:
   image:
