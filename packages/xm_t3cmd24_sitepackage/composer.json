@@ -1,0 +1,21 @@
+{
+  "name": "xima/xm-t3cmd24-sitepackage",
+  "description": "Example Sitepackage",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Maik Schneider",
+      "email": "maik.schneider@xima.de"
+    }
+  ],
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "xm_t3cmd24_sitepackage"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Xima\\XmT3cmd24Sitepackage\\": "Classes"
+    }
+  }
+}

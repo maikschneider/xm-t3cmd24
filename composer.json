@@ -1,0 +1,113 @@
+{
+  "name": "xima/xm-t3cmd24",
+  "description": "Example TYPO3 12 LTS for T3CMD24",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Maik Schneider",
+      "email": "maik.schneider@xima.de"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/*"
+    },
+    {
+      "url": "https://github.com/maikschneider/ext-oauth2-client.git",
+      "type": "git"
+    },
+    {
+      "url": "https://github.com/maikschneider/t3api.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "php": "8.2.*",
+    "blueways/bw-icons": "dev-12.x-dev",
+    "blueways/bw-static-template": "^3.0.0",
+    "sourcebroker/t3api": "@dev",
+    "typo3/cms-adminpanel": "^12.4.11",
+    "typo3/cms-backend": "^12.4.11",
+    "typo3/cms-belog": "^12.4.11",
+    "typo3/cms-beuser": "^12.4.11",
+    "typo3/cms-core": "^12.4.11",
+    "typo3/cms-extbase": "^12.4.11",
+    "typo3/cms-extensionmanager": "^12.4.11",
+    "typo3/cms-filelist": "^12.4.11",
+    "typo3/cms-filemetadata": "^12.4.11",
+    "typo3/cms-fluid": "^12.4.11",
+    "typo3/cms-fluid-styled-content": "^12.4.11",
+    "typo3/cms-form": "^12.4.11",
+    "typo3/cms-frontend": "^12.4.11",
+    "typo3/cms-info": "^12.4.11",
+    "typo3/cms-install": "^12.4.11",
+    "typo3/cms-lowlevel": "^12.4.11",
+    "typo3/cms-reports": "^12.4.11",
+    "typo3/cms-rte-ckeditor": "^12.4.11",
+    "typo3/cms-scheduler": "^12.4.11",
+    "typo3/cms-setup": "^12.4.11",
+    "typo3/cms-sys-note": "^12.4.11",
+    "typo3/cms-t3editor": "^12.4.11",
+    "typo3/cms-tstemplate": "^12.4.11",
+    "typo3/cms-workspaces": "^12.4.11",
+    "waldhacker/typo3-oauth2-client": "dev-feature/v12-compatibility-1",
+    "xima/xima-oauth2-extended": "^2.0.2",
+    "xima/xima-typo3-mailcatcher": "^1.3.1",
+    "xima/xima-typo3-manual": "^1.0",
+    "xima/xm-t3cmd24-sitepackage": "*@dev"
+  },
+  "extra": {
+    "composer-exit-on-patch-failure": true,
+    "typo3/cms": {
+      "web-dir": "public"
+    },
+    "helhum/dotenv-connector": {
+      "env-file": ".env",
+      "adapter": "Helhum\\DotEnvConnector\\Adapter\\SymfonyDotEnv"
+    }
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.0",
+    "codeception/module-asserts": "^3.0",
+    "codeception/module-phpbrowser": "^3.0",
+    "codeception/module-rest": "^3.3",
+    "codeception/module-webdriver": "^4.0",
+    "friendsofphp/php-cs-fixer": "^3.34.1",
+    "helmich/typo3-typoscript-lint": "^3.2",
+    "saschaegerer/phpstan-typo3": "^1.1.2",
+    "ssch/typo3-rector": "^1.3.6",
+    "symfony/translation": "^6.3"
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@typo3-cms-scripts"
+    ],
+    "php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
+    "php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php fix",
+    "php:stan": "php vendor/bin/phpstan --generate-baseline=phpstan-baseline.neon --allow-empty-baseline",
+    "test:acceptance": "php vendor/bin/codecept run",
+    "typoscript:lint": "php vendor/bin/typoscript-lint",
+    "ci:php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
+    "ci:php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php check --format=junit > phpfixer-report.xml",
+    "ci:php:stan": "php vendor/bin/phpstan --no-progress --error-format=junit > phpstan-report.xml",
+    "ci:xml:lint": "find ./packages/xima_lkbt_sitepackage -name '*.xlf' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout",
+    "ci:yaml:lint": "find ./packages ! -path '*node_modules/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r yaml-lint",
+    "ci:typoscript:lint": "php vendor/bin/typoscript-lint --fail-on-warnings",
+    "ci:test:acceptance": "php vendor/bin/codecept run --xml --no-interaction"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true,
+      "typo3/class-alias-loader": true,
+      "php-http/discovery": true,
+      "helhum/dotenv-connector": true
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "Tests/"
+    }
+  }
+}
