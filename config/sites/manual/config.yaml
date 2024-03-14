@@ -1,0 +1,15 @@
+base: 'https://xm-t3cmd24.ddev.site/manual'
+enabled_oauth2_providers: ''
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    locale: en_US.UTF-8
+    navigationTitle: English
+    flag: us
+oauth2_callback_slug: ''
+oauth2_storage_pid: ''
+rootPageId: 8
+websiteTitle: 'TYPO3 Example Manual'
