@@ -1,0 +1,7 @@
+[like(applicationContext, "Development/")]
+   config {
+      no_cache = 1
+      sendCacheHeaders = 0
+      contentObjectExceptionHandler = 0
+   }
+[GLOBAL]

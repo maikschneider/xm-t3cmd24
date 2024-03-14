@@ -24,6 +24,7 @@
   ],
   "require": {
     "php": "8.2.*",
+    "bk2k/bootstrap-package": "^14.0",
     "blueways/bw-icons": "dev-12.x-dev",
     "blueways/bw-static-template": "^3.0.0",
     "sourcebroker/t3api": "@dev",

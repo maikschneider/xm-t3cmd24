@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fdeadc81291b3a4bef6779cae7ecae8",
+    "content-hash": "5a461c7d4f29b26415d067207b11800c",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -59,6 +59,115 @@
                 "source": "https://github.com/Bacon/BaconQrCode/tree/2.0.8"
             },
             "time": "2022-12-07T17:46:57+00:00"
+        },
+        {
+            "name": "bk2k/bootstrap-package",
+            "version": "14.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjaminkott/bootstrap_package.git",
+                "reference": "45333312fceb60fc96a27fd648e8a5547dc230cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjaminkott/bootstrap_package/zipball/45333312fceb60fc96a27fd648e8a5547dc230cc",
+                "reference": "45333312fceb60fc96a27fd648e8a5547dc230cc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-filter": "*",
+                "ext-hash": "*",
+                "ext-json": "*",
+                "ext-libxml": "*",
+                "ext-pdo": "*",
+                "ext-simplexml": "*",
+                "php": ">=7.4.0",
+                "scssphp/scssphp": "^1.8.1",
+                "typo3/cms-backend": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-core": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-extbase": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-extensionmanager": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-fluid": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-frontend": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-install": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-rte-ckeditor": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-seo": "^11.5 || ^12.1 || 12.*.*@dev"
+            },
+            "require-dev": {
+                "b13/container": "^2.0",
+                "bk2k/demo-package": "@dev",
+                "bk2k/extension-helper": "^2.0",
+                "friendsofphp/php-cs-fixer": "^3.14",
+                "friendsoftypo3/phpstan-typo3": "^0.9",
+                "overtrue/phplint": "^3.2 || ^4.3 || ^5.3",
+                "phpstan/phpstan": "^1.7",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.1",
+                "phpstan/phpstan-strict-rules": "^1.2",
+                "typo3/cms-belog": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-felogin": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-filelist": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-form": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-indexed-search": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-info": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-lowlevel": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-tstemplate": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/cms-workspaces": "^11.5 || ^12.1 || 12.*.*@dev",
+                "typo3/testing-framework": "^7.0.0 || ^8.0.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-BP_14_0": "14.0.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "bootstrap_package",
+                    "web-dir": ".build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BK2K\\BootstrapPackage\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Kott",
+                    "email": "info@bk2k.info",
+                    "homepage": "http://www.bk2k.info/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Bootstrap Package delivers a full configured frontend theme for TYPO3, based on the Bootstrap CSS Framework.",
+            "homepage": "https://www.bootstrap-package.com/",
+            "keywords": [
+                "TYPO3 CMS",
+                "bootstrap",
+                "frontend",
+                "introduction",
+                "responsive",
+                "sitepackage",
+                "theme",
+                "web"
+            ],
+            "support": {
+                "docs": "https://docs.typo3.org/p/bk2k/bootstrap-package/main/en-us/",
+                "issues": "https://github.com/benjaminkott/bootstrap_package/issues",
+                "source": "https://github.com/benjaminkott/bootstrap_package",
+                "wiki": "https://github.com/benjaminkott/bootstrap_package/wiki"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/benjaminkott",
+                    "type": "custom"
+                }
+            ],
+            "time": "2023-08-14T14:44:23+00:00"
         },
         {
             "name": "blueways/bw-focuspoint-images",
@@ -3406,6 +3515,86 @@
                 "source": "https://github.com/MyIntervals/PHP-CSS-Parser/tree/8.4.0"
             },
             "time": "2021-12-11T13:40:54+00:00"
+        },
+        {
+            "name": "scssphp/scssphp",
+            "version": "v1.12.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scssphp/scssphp.git",
+                "reference": "394ed1e960138710a60d035c1a85d43d0bf0faeb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/394ed1e960138710a60d035c1a85d43d0bf0faeb",
+                "reference": "394ed1e960138710a60d035c1a85d43d0bf0faeb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.3 || ^9.4",
+                "sass/sass-spec": "*",
+                "squizlabs/php_codesniffer": "~3.5",
+                "symfony/phpunit-bridge": "^5.1",
+                "thoughtbot/bourbon": "^7.0",
+                "twbs/bootstrap": "~5.0",
+                "twbs/bootstrap4": "4.6.1",
+                "zurb/foundation": "~6.7.0"
+            },
+            "suggest": {
+                "ext-iconv": "Can be used as fallback when ext-mbstring is not available",
+                "ext-mbstring": "For best performance, mbstring should be installed as it is faster than ext-iconv"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "forward-command": false,
+                    "bin-links": false
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ScssPhp\\ScssPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "homepage": "https://github.com/robocoder"
+                },
+                {
+                    "name": "Cédric Morin",
+                    "email": "cedric@yterium.com",
+                    "homepage": "https://github.com/Cerdic"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://scssphp.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "support": {
+                "issues": "https://github.com/scssphp/scssphp/issues",
+                "source": "https://github.com/scssphp/scssphp/tree/v1.12.1"
+            },
+            "time": "2024-01-13T12:36:40+00:00"
         },
         {
             "name": "sourcebroker/deployer-extended",
@@ -8446,6 +8635,69 @@
             "support": {
                 "chat": "https://typo3.org/help",
                 "docs": "https://docs.typo3.org/c/typo3/cms-scheduler/main/en-us",
+                "issues": "https://forge.typo3.org",
+                "source": "https://github.com/typo3/typo3"
+            },
+            "time": "2024-03-12T08:15:14+00:00"
+        },
+        {
+            "name": "typo3/cms-seo",
+            "version": "v12.4.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/seo.git",
+                "reference": "7e6906afbf7ff569e918263b7b00288eb7d2f3c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/seo/zipball/7e6906afbf7ff569e918263b7b00288eb7d2f3c1",
+                "reference": "7e6906afbf7ff569e918263b7b00288eb7d2f3c1",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "12.4.12",
+                "typo3/cms-extbase": "12.4.12",
+                "typo3/cms-frontend": "12.4.12"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "suggest": {
+                "typo3/cms-dashboard": "TYPO3 users can add widgets that can help to optimise their website for search engines"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "12.4.x-dev"
+                },
+                "typo3/cms": {
+                    "extension-key": "seo",
+                    "Package": {
+                        "partOfFactoryDefault": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Seo\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "TYPO3 CMS SEO - SEO features including specific fields for SEO purposes, rendering of HTML meta tags and sitemaps.",
+            "homepage": "https://typo3.org",
+            "support": {
+                "chat": "https://typo3.org/help",
+                "docs": "https://docs.typo3.org/c/typo3/cms-seo/main/en-us",
                 "issues": "https://forge.typo3.org",
                 "source": "https://github.com/typo3/typo3"
             },

@@ -1,0 +1,9 @@
+# dependencies
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/Bootstrap5/setup.typoscript'
+@import 'EXT:cs_seo/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bw_static_template/Configuration/TypoScript/setup.typoscript'
+
+# own
+@import 'EXT:xima_lkbt_sitepackage/Configuration/TypoScript/Setup/config.typoscript'
+@import 'EXT:xima_lkbt_sitepackage/Configuration/TypoScript/Setup/dev.typoscript'

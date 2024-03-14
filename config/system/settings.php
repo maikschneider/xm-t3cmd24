@@ -27,6 +27,16 @@ return [
             'loginLogo' => 'EXT:xm_t3cmd24_sitepackage/Resources/Public/Backend/Images/logo_t3cmd.svg',
             'loginLogoAlt' => '',
         ],
+        'bootstrap_package' => [
+            'disableCssProcessing' => '0',
+            'disableGoogleFontCaching' => '1',
+            'disablePageTsBackendLayouts' => '1',
+            'disablePageTsContentElements' => '1',
+            'disablePageTsRTE' => '1',
+            'disablePageTsTCADefaults' => '1',
+            'disablePageTsTCEFORM' => '1',
+            'disablePageTsTCEMAIN' => '1',
+        ],
         'bw_icons' => [
             'pages' => '0',
             'sys_category' => '0',

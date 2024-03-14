@@ -1,0 +1,5 @@
+# dependencies
+@import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
+
+# bootstrap_package
+page.logo.file = EXT:xm_t3cmd24_sitepackage/Resources/Public/Backend/Images/logo_t3cmd.svg
