@@ -1,0 +1,57 @@
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE != "merge_request_event" || $CI_COMMIT_BEFORE_SHA != '0000000000000000000000000000000000000000'
+
+variables:
+  BASE_BRANCH: "main"
+  RESET_JOB: "false"
+  project_webserver: "t3-debian12-01"
+  project_database: "t3-mariadb10-11-01"
+  project_php_version: "8.2"
+  downstream_pipeline_branch: major-1.x.x
+
+default:
+  image:
+    name: ghcr.io/xima-media/php8.2-composer:2.7.1@sha256:6a316cffb2db924a5885a5fe0f82996cb7c0eb15c6a29282f83fb81d5a1fa130
+    pull_policy: if-not-present
+
+stages:
+  - build
+  - test
+  - provision
+  - deploy
+  - test.acceptance
+  - reset
+
+include:
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/build-php.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/build-node.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/test-php-lint.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/test-php-cs-fixer.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/test-php-stan.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/test-xml-lint.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/test-yaml-lint.yml'
+  - 'https://raw.githubusercontent.com/xima-media/gitlab-templates/main/.deploy-prepare.yml'
+  - project: 'typo3/intern/devops/sys-t3-ansible-management'
+    ref: dev
+    file:
+      - 'gitlab-templates/manage-environment.yml'
+    rules:
+      - if: $RESET_JOB == "true"
+        when: never
+      - if: $CI_COMMIT_BRANCH == "main"
+      - if: $CI_COMMIT_BRANCH == "development"
+      - if: $CI_COMMIT_BRANCH =~ /^T3CMD-.*$/
+
+build-node:
+  image:
+    name: node:18-slim@sha256:8d6134753fa4bc1d3b2dd23e1e32c484b8c6bddbe09f60125aad8026fa4b1d91
+  artifacts:
+    paths:
+      - packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css/
+      - packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/JavaScript/
+
+deploy-xima-testing:
+  script:
+    - echo "DEACTIVATED"
+
