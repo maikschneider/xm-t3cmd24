@@ -5,8 +5,8 @@ workflow:
 variables:
   BASE_BRANCH: "main"
   RESET_JOB: "false"
-  project_webserver: "t3-debian12-01"
-  project_database: "t3-mariadb10-11-01"
+  project_webserver: "t3-debian12-test"
+  project_database: "t3-mariadb10-11-test"
   project_php_version: "8.2"
   downstream_pipeline_branch: dev
 
