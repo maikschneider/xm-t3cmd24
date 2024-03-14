@@ -3,3 +3,6 @@
 
 # bootstrap_package
 page.logo.file = EXT:xm_t3cmd24_sitepackage/Resources/Public/Backend/Images/logo_t3cmd.svg
+
+# bw_static_template
+plugin.tx_bwstatictemplate.view.templateRootPath = EXT:xm_t3cmd24_sitepackage/Resources/Private/Extensions/bw_static_template/Templates

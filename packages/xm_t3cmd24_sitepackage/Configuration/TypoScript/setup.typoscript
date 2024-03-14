@@ -5,5 +5,6 @@
 @import 'EXT:bw_static_template/Configuration/TypoScript/setup.typoscript'
 
 # own
-@import 'EXT:xima_lkbt_sitepackage/Configuration/TypoScript/Setup/config.typoscript'
-@import 'EXT:xima_lkbt_sitepackage/Configuration/TypoScript/Setup/dev.typoscript'
+@import 'EXT:xm_t3cmd24_sitepackage/Configuration/TypoScript/Setup/config.typoscript'
+@import 'EXT:xm_t3cmd24_sitepackage/Configuration/TypoScript/Setup/page.typoscript'
+@import 'EXT:xm_t3cmd24_sitepackage/Configuration/TypoScript/Setup/dev.typoscript'

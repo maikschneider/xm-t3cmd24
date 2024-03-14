@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+
+<f:section name="Main">
+
+    <h1>Awesome cat facts</h1>
+    <ul>
+        <f:for each="{0:0,1:1,2:2,3:3,4:4}" as="i">
+            <li>{data.{i}}</li>
+        </f:for>
+    </ul>
+
+</f:section>
+
+</html>

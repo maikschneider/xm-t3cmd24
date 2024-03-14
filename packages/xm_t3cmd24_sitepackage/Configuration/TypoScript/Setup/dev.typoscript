@@ -1,7 +1,16 @@
-[like(applicationContext, "Development/")]
+[like(applicationContext, "Development/Local")]
    config {
       no_cache = 1
       sendCacheHeaders = 0
       contentObjectExceptionHandler = 0
+   }
+
+   page {
+      includeCSS {
+         app = EXT:xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css/App.css
+      }
+      includeJS {
+         app = EXT:xm_t3cmd24_sitepackage/Resources/Public/Frontend/JavaScript/App.js
+      }
    }
 [GLOBAL]

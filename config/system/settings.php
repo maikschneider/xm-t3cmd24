@@ -164,7 +164,7 @@ return [
         'encryptionKey' => '',
         'exceptionalErrors' => 4096,
         'features' => [
-            'security.backend.enforceContentSecurityPolicy' => true,
+            'security.backend.enforceContentSecurityPolicy' => false,
             'security.usePasswordPolicyForFrontendUsers' => true,
         ],
         'sitename' => 'TYPO3Camp Mitteldeutschland [LIVE]',

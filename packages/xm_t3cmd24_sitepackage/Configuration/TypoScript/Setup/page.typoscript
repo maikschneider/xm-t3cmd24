@@ -1,0 +1,14 @@
+page {
+   includeCSS {
+      app = EXT:xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css/App.min.css
+   }
+
+   includeJS {
+      app = EXT:xm_t3cmd24_sitepackage/Resources/Public/Frontend/JavaScript/App.min.js
+      app.type = module
+   }
+}
+
+[traverse(page, "uid") == 6]
+   page.includeCSS.organigramm = EXT:xm_t3cmd24_sitepackage/Resources/Public/Frontend/Static/Organigramm.css
+[END]

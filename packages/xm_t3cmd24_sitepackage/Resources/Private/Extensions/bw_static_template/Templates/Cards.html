@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+
+    <div class="row">
+        <f:for each="{cards}" as="card" iteration="i">
+            <div class="col">
+                <div class="card">
+                    <f:if condition="{files.{i.index}}">
+                        <f:image image="{files.{i.index}}" width="400px" class="card-img-top" cropVariant="default" />
+                    </f:if>
+                    <div class="card-body">
+                        <h5 class="card-title">{card.title}</h5>
+                        <p class="card-text">{card.body}</p>
+                        <f:link.typolink parameter="{card.link}" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+
+</f:section>
