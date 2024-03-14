@@ -21,10 +21,10 @@ return [
         'backend' => [
             'backendFavicon' => '',
             'backendLogo' => '',
-            'loginBackgroundImage' => 'EXT:xm_t3cmd24_sitepackage/Resources/Public/Images/camp_bg.jpg',
+            'loginBackgroundImage' => 'EXT:xm_t3cmd24_sitepackage/Resources/Public/Backend/Images/camp_bg.jpg',
             'loginFootnote' => '',
             'loginHighlightColor' => '#c92518',
-            'loginLogo' => 'EXT:xm_t3cmd24_sitepackage/Resources/Public/Images/logo_t3cmd.svg',
+            'loginLogo' => 'EXT:xm_t3cmd24_sitepackage/Resources/Public/Backend/Images/logo_t3cmd.svg',
             'loginLogoAlt' => '',
         ],
         'bw_icons' => [

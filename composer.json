@@ -92,7 +92,7 @@
     "ci:php:lint": "find *.php . -name '*.php' ! -path './vendor/*'  ! -path './var/*' ! -path '*node_modules/*' -print0 | xargs -0 -n 1 -P 4 php -l",
     "ci:php:fixer": "php vendor/bin/php-cs-fixer --config=php-cs-fixer.php check --format=junit > phpfixer-report.xml",
     "ci:php:stan": "php vendor/bin/phpstan --no-progress --error-format=junit > phpstan-report.xml",
-    "ci:xml:lint": "find ./packages/xima_lkbt_sitepackage -name '*.xlf' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout",
+    "ci:xml:lint": "find ./packages -name '*.xlf' | xargs -r xmllint --schema vendor/symfony/translation/Resources/schemas/xliff-core-1.2-transitional.xsd --noout",
     "ci:yaml:lint": "find ./packages ! -path '*node_modules/*' \\( -name '*.yaml' -o -name '*.yml' \\) | xargs -r yaml-lint",
     "ci:typoscript:lint": "php vendor/bin/typoscript-lint --fail-on-warnings",
     "ci:test:acceptance": "php vendor/bin/codecept run --xml --no-interaction"

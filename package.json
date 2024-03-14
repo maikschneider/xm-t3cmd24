@@ -1,0 +1,44 @@
+{
+  "name": "xima-t3cmd24",
+  "version": "1.0.0",
+  "license": "GPL-2.0-or-later",
+  "author": "XIMA MEDIA GmbH",
+  "description": "Demo Project",
+  "engines": {
+    "npm": ">=9.0.0 <10.0.0",
+    "node": ">=18.0.0 <19.0.0"
+  },
+  "scripts": {
+    "start": "npm-run-all -p style:watch ts:watch",
+    "build": "npm-run-all -s style:build ts:build",
+    "style:watch": "postcss packages/xm_t3cmd24_sitepackage/Resources/Private/Css/App.css -o packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css/App.css -w --verbose",
+    "style:build": "postcss --env='production' packages/xm_t3cmd24_sitepackage/Resources/Private/Css/App.css -o packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css/App.min.css",
+    "ts:watch": "node esbuild.config.mjs --watch",
+    "ts:build": "node esbuild.config.mjs --build"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
+    "autoprefixer": "^10.4.16",
+    "axe-core": "^4.8.2",
+    "esbuild": "^0.20.0",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-svelte": "^2.35.1",
+    "npm-check-updates": "^16.14.5",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.5",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "cssnano": "^6.0.1",
+    "esbuild-svelte": "^0.8.0",
+    "svelte": "^4.2.2",
+    "svelte-preprocess": "^5.0.4"
+  }
+}
