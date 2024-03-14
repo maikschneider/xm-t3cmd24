@@ -1,4 +1,5 @@
 .env
+deploy.php
 
 packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/Css
 packages/xm_t3cmd24_sitepackage/Resources/Public/Frontend/JavaScript
