@@ -12,5 +12,3 @@ It's just a TYPO3v12 + bootstrap_package. Installed extensions for demonstration
 * [xima-media/xima-typo3-manual](https://github.com/xima-media/xima-typo3-manual)
 * [xima-media/xima-deployer-extended-typo3](https://github.com/xima-media/xima-deployer-extended-typo3)
 * [xima-media/xima-typo3-recordlist](https://github.com/xima-media/xima-typo3-recordlist)
-
-Here you can see the demo in action: https://main.dev.xm-t3cmd24.xima.dev/
